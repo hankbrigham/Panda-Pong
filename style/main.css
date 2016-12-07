@@ -1,0 +1,64 @@
+#screen {
+  width: 800px;
+  height: 600px;
+  background-color: black;
+  border: 1px solid black;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+.main-div {
+  height:100%;
+  width: 100%;
+
+}
+
+#title {
+  text-align: center;
+  font-size: 30px;
+  font-family:monospace;
+}
+body {
+  background-image: url("../images/forest.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#scores {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  background-color: white;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.score-text {
+  text-align: center;
+  margin-top: 5px;
+}
+#individual-scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+h5 {
+  margin: 0;
+}
+.player-div {
+  width: 30%;
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.player-div1 {
+  width: 30%;
+  margin-left: 70px;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
