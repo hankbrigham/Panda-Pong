@@ -25,8 +25,7 @@
 	</style>
 </head>
 <body>
-	//Scott Barrett worked on this project with me
-
+	
 	<div id="screen">
 		<div class="paddle" id="paddle_1"></div>
 		<div class="paddle" id="paddle_2"></div>
@@ -82,7 +81,7 @@
 	//update
 	function update(){
 		if ((ball_model.x + 20 > paddle_1_model.x) && (ball_model.x < paddle_1_model.x + 20)){
-		      if((ball_model.y < paddle_1_model.y+100) && (ball_model.y 
+		      if((ball_model.y < paddle_1_model.y+100) && (ball_model.y
 		      	+20 > paddle_1_model.y)){
 		        ball_model.vx = ball_model.vx * -1;
 		      }
@@ -95,8 +94,8 @@
 		//update the ball model position
 		ball_model.x = ball_model.x + ball_model.vx;
 		ball_model.y = ball_model.y + ball_model.vy;
-		
-		
+
+
 		//check if the ball is colliding with the edge
 		if (ball_model.y > 580 || ball_model.y < 20) {
 			//bottom edge
@@ -115,7 +114,7 @@
 			reset();
 		}
 
-	}	
+	}
 	//draw
 	function draw() {
 		//draw paddle 1
@@ -125,7 +124,7 @@
 		//draw paddle 2
 		paddle_2_element.style.top = paddle_2_model.y + "px";
 		paddle_2_element.style.left = paddle_2_model.x + "px";
-		
+
 		//draw the ball
 		ball_element.style.top = ball_model.y + "px";
 		ball_element.style.left = ball_model.x + "px";
@@ -156,4 +155,3 @@
 	</script>
 </body>
 </html>
-
