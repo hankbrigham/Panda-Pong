@@ -17,9 +17,17 @@
   color: silver;
 }
 .paddle {
-  color: #5D8363;
+  color: green;
 }
-
+#paddle {
+  color: green;
+}
+.paddle {
+  width: 20px;
+  height: 100px;
+  background-color: forestgreen;
+  position: absolute;
+}
 #title {
   text-align: center;
   font-size: 30px;
