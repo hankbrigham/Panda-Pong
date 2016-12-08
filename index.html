@@ -148,14 +148,27 @@ document.getElementById("paddle_2").style.backgroundImage=chooseImg(chooseRandIm
             ball_model.x = 400;
             ball_model.y = 300;
         }
-        // comupter paddle follows ball
-        if(ball_model.vx > 0){
-            paddle_2_model.y = ball_model.y - 70;
-        } else if (paddle_2_model.y < 250 && paddle_2_model != 250) {
-            paddle_2_model.y += 5;
-        } else if (paddle_2_model.y > 250 && paddle_2_model != 250){
-            paddle_2_model.y -= 5;
-        }
+				// move paddle 2 with the ball.
+				if (ball_model.vy < 0){
+					paddle_2_model.y = paddle_2_model.y + (ball_model.vy + 1);
+				} else if (ball_model.vy > 0){
+					paddle_2_model.y = paddle_2_model.y + (ball_model.vy - 1);
+				}
+						// paddle 2 change direction if it gets too far away from ball
+				if (paddle_2_model.vy > 0 && ball_model.vy > 0 && paddle_2_model.y > ball_model.y + 60 && ball_model.vx > 0){
+					paddle_2_model.vy = paddle_2_model.vy * -1;
+				}
+				if (paddle_2_model.vy < 0 && ball_model.vy < 0 && paddle_2_model.y < 			       						ball_model.y - 120 && ball_model.vx > 0){
+					paddle_2_model.vy = paddle_2_model.vy * -1;
+				}
+				// paddle 2 staying in middle while ball is moving away
+				if (ball_model.vx < 0 && paddle_2_model.y < 245){
+					paddle_2_model.vy = 3;
+				} else if (ball_model.vx < 0 && paddle_2_model.y > 255){
+					paddle_2_model.vy = -3;
+				} else if (ball_model.vx < 0){
+					paddle_2_model.vy = 0;
+				}
 //=-=-=-=-=-=-=-=-=TODO-=-=-=-=-=-=-=-=-=-=-//
 //      Move paddle two with keyboard       //
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-//
