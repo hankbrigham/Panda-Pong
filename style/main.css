@@ -14,7 +14,9 @@
 
 }
 .score-text {
-  color: silver;
+  color: #7300e6;
+  text-align: center;
+  margin-top: 5px;
 }
 .paddle {
   color: green;
@@ -48,10 +50,7 @@ body {
   flex-direction: column;
   border-radius: 10px;
 }
-.score-text {
-  text-align: center;
-  margin-top: 5px;
-}
+
 #individual-scores {
   display: flex;
   flex-direction: row;
