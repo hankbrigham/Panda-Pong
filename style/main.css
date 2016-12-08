@@ -13,6 +13,12 @@
   width: 100%;
 
 }
+.score-text {
+  color: silver;
+}
+.paddle {
+  color: #5D8363;
+}
 
 #title {
   text-align: center;
